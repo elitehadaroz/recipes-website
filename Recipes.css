@@ -140,7 +140,8 @@ h5 {
 }
 .button1:hover, .button2:hover {span {
     letter-spacing: 2px;
-}
+}};
+
 .button1:hover::before, .button2:hover::before {
     opacity: 1;
     transform: scale(1, 1);
