@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.9.3/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.9.3/firebase-analytics.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.9.3/firebase-database.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script type="text/javascript" src="Recipes.js"></script>
+<link rel = "stylesheet" href = "Recipes.css" />
+<html lang="en">
+<title>Recipes list</title>
+<header>
+    <meta charset="UTF-8">
+
+    <h1>Your Recipes list:</h1>
+    <h5>Add your own recipes, all recipes will be saved</h5>
+</header>
+<body>
+    <div class="table">
+        <table id="recipes_table" class="table">
+            <thead>
+                <tr>
+                    <th> <div id="recipeNameColumn">
+                      <img id="recipePic" src="food.png" class="hover">
+                      <p class="imgDescription">Recipe Name</p>
+                      </div>
+                    </th>
+
+                    <th> <div id="ingredientsColumn">
+                      <img id="ingredientsPic" src="ingredients.png" class="hover">
+                      <p class="imgDescription">Ingredients</p>
+                      </div>
+                    </th>
+
+                    <th> <div id="preparationColumn">
+                      <img id="preparationPic" src="checklist.png" class="hover">
+                      <p class="imgDescription">Preparation</p>
+                    </div>
+                    </th>
+
+                    <!-- <th class="recipeNameColumn">Recipe Name</th>
+                    <th class="ingredientsColumn">Ingredients</th>
+                    <th class="preparationColumn">Preparation</th> -->
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+    </div>
+
+    <div class="button1" onclick="showHideDiv('addRecipeForm')">
+        <span> Add Recipe </span>
+    </div>
+
+    <div id=addRecipeForm class="form" >
+        Recipe Name:<textarea name="recipeName" id="rName"></textarea>
+        Ingredients:<textarea type="text" name="ingredients" id="ing"></textarea>
+        Preparation:<textarea type="text" name="preparation" id="prep"></textarea>
+
+        <div class="button2" onclick="addRowToTableFromUser(); clearTextAreas()">
+            <span> Add </span>
+        </div>
+    </div>
+
+
+</body>
+</html>
