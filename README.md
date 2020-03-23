@@ -2,7 +2,7 @@
 ## Mini web project for recipes storage
 
 ## Tools & Practices
-|Category|Status|
+
 |---|---|
 | Version Control System| git & github |
 | Languages | [Java Script](https://www.javascript.com/) & [html](https://html.com/)|
