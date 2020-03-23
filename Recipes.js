@@ -1,10 +1,4 @@
-//addrecipebt = document.getElementById("addButton");
-//addrowbt = document.getElementById("bt")
-// rName = document.getElementById("rName");
-// ing = document.getElementById("ing");
-// prep = document.getElementById("prep");
-var jsonArr = []
-var js = []
+var recipesJsonArr = []
 
 //caliing functions that reading json from firebase and adding this data to the table when page is reload:
 window.onload = function() {
@@ -70,9 +64,9 @@ function addRowToTableFromUser() {
     }
 
     //saving json data to firebase server:
-    jsonArr.push(jsonObj);
-    console.log(jsonArr);
-    firebaseData.set(jsonArr);
+    recipesJsonArr.push(jsonObj);
+    console.log(recipesJsonArr);
+    firebaseData.set(recipesJsonArr);
 
   }
 }
@@ -88,20 +82,18 @@ function clearTextAreas() {
 
 //reads Json data from firebase app:
 function readingJsonFromFirebase() {
+  //push each item in firebase data to the recipes json array: 
   firebaseData.once("value", function(data) {
       data.forEach((item, i) => {
-      js.push(item.toJSON());
+      recipesJsonArr.push(item.toJSON());
     });
 });
 }
 
 //adding json data as row to the table:
 function addRowToTableFromFirebase() {
-  for(var i = 0; i < js.length; i++) {
-    var obj = js[i];
-
-    //pushing current json objet to the json array that hold all json recipes:
-    jsonArr.push(obj);
+  for(var i = 0; i < recipesJsonArr.length; i++) {
+    var obj = recipesJsonArr[i];
 
     //adding current json object to table
     creatingAndAddingRowToTable(obj.recipe_name, obj.ingredients, obj.preparation);
