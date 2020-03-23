@@ -81,7 +81,7 @@ h5 {
     padding-bottom: 12px;
     text-align: center;
     /* background-color: */
-    /*background-color:cadetblue */
+    /* background-color:cadetblue; */
     color: white;
 }
 
@@ -107,6 +107,7 @@ h5 {
   text-align: center;
   color: white;
   width: 60px;
+  cursor: pointer;
   margin-top: 4%;
   margin-bottom: 4%;
   margin-left: 40%;
@@ -116,7 +117,7 @@ h5 {
 
 }
 
-.button1, .button2 span {
+.button1 span, .button2 span {
     transition: all 0.3s;
 }
 
@@ -138,9 +139,9 @@ h5 {
     border-bottom-color: rgba(255,255,255,0.5);
     transform: scale(0.1, 1);
 }
-.button1:hover, .button2:hover {span {
+.button1:hover span, .button2:hover span {
     letter-spacing: 2px;
-}};
+}
 
 .button1:hover::before, .button2:hover::before {
     opacity: 1;
