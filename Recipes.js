@@ -86,8 +86,8 @@ function readingJsonFromFirebase() {
   firebaseData.once("value", function(data) {
       data.forEach((item, i) => {
       recipesJsonArr.push(item.toJSON());
-    });
-});
+      });
+  });
 }
 
 //adding json data as row to the table:

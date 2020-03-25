@@ -85,6 +85,10 @@ h5 {
     color: white;
 }
 
+.hover:hover {
+    transform: scale(1.5);
+}
+
 .button1 {
   font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
   font-weight: bold;
